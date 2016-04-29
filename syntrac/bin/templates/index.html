@@ -1,0 +1,48 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1"/>
+<title>Home Page</title>
+<link th:href="@{/assets/styles/bootstrap.min.css}" rel='stylesheet'/>
+<link th:href="@{/assets/styles/bootstrap-theme.min.css}"  rel='stylesheet'/>
+<link th:href="@{/assets/styles/jquery-ui.min.css}"  rel='stylesheet'/>
+<link th:href="@{/assets/styles/common.css}"  rel='stylesheet'/>
+</head>
+<body>
+
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header"></div>
+			<button type="button" class="navbar-toggle collapsed"
+				data-toggle="collapse" data-target="#nav-collapse"
+				aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
+			<div class="collapse navbar-collapse"
+				id="nav-collapse">
+				<ul class="nav navbar-nav">
+					<li id="home"><a href="#">Home<span class="sr-only">(current)</span></a></li>
+					<li id="patient"><a href="#patient">Patient</a></li>
+					<li id="procedure"><a href="#procedure">Procedure</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</nav>
+	<div class="container-fluid">
+		<div id="alertContainer"></div>
+		<div id="main" data-bind="component:{name:currentRoute().page,params:currentRoute}">
+		</div>
+	</div>
+	
+	
+	
+	
+	<script  th:src="@{/js/lib/jquery-2.2.3.min.js}"></script>
+	<script  th:src="@{/js/lib/jquery-ui.min.js}"></script>
+	<script data-main ="/js/app/main.js" th:src="@{/js/lib/require.js}"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+.patient-summary-padding {
+	padding-top:7px;
+}
+
+.patient-list-item-padding {
+	padding-top:7px;
+}
+
+a {
+	cursor:pointer;
+}
+
+.removeLink {
+	color:red;
+}

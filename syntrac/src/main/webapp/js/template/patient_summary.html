@@ -1,0 +1,27 @@
+<div class="page-header">
+	<h2>Patient Summary</h2>
+</div>
+<div class="row">
+	<div class="col-sm-2">
+		<div class="patient-summary-padding">First Name</div>
+	</div>
+	<div class="col-sm-2">
+		<div class="patient-summary-padding">Last Name</div>
+	</div>
+	<div class="col-sm-2">
+		<div class="patient-summary-padding">Gender</div>
+	</div>
+	<div class="col-sm-2">
+		<div class="patient-summary-padding">Email</div>
+	</div>
+	<div class="col-sm-2">
+		<div class="patient-summary-padding">Actions</div>
+	</div>
+	<div class="col-sm-2">
+		<a class="btn btn-primary" href="#patient/create"><span class="glyphicon glyphicon-plus">Add Product</span></a>
+	</div>
+</div>
+<div class="patient-summary-padding"></div>
+<div class="row" data-bind="foreach:patients">
+	<patient_list_item params="{'patientModel':$data}"></patient_list_item>
+</div>

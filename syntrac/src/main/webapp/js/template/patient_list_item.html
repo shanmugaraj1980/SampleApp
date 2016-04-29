@@ -1,0 +1,16 @@
+<div class="col-sm-2">
+	<div class="patient-list-item-padding" data-bind="text:firstName"></div>
+</div>
+<div class="col-sm-2">
+	<div class="patient-list-item-padding" data-bind="text:lastName"></div>
+</div>
+<div class="col-sm-2" >
+	<div class="patient-list-item-padding" data-bind="text:genderDisplay"></div>
+</div>
+<div class="col-sm-2">
+	<div class="patient-list-item-padding" data-bind="text:email"></div>
+</div>
+<div class="col-sm-4 patient-list-item-padding">
+	<a data-bind="attr:{href:patientUri}"><span class="glyphicon glyphicon-play"></span></a>
+	<a class="removeLink" data-bind="click:$parents[1].remove"><span class="glyphicon glyphicon-remove"></span></a>
+</div>

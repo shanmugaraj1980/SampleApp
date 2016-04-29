@@ -1,0 +1,54 @@
+<div class="page-header">
+<h2 data-bind="ifnot:id">Create Patient</h2>
+<h2 data-bind="if:id">Edit Patient</h2>
+</div>
+
+<h3>Details</h3>
+<div class="form-group">
+	<label for="firstName">FirstName</label>
+	<input class="form-control" data-bind="value:firstName" name="firstName" placeholder="John"/>
+</div>
+<div class="form-group">
+	<label for="lastName">Last Name</label>
+	<input class="form-control" data-bind="value:lastName" name="lastName" placeholder="Smith"/>
+</div>
+<div class="form-group">
+	<label for="gender">Gender</label>
+	<select class="form-control" name="gender" data-bind="value:gender">
+		<option value=''>Select One</option>
+		<option value='M'>Male</option>
+		<option value='F'>Female</option>
+	</select>
+</div>
+<div class="form-group">
+	<label for="email">Email</label>
+	<input class="form-control" data-bind="value:email" name="email" placeholder="john.smith@tardis.com"/>
+</div>
+<div class="form-group">
+	<label for="dob">Date of Birth</label>
+	<input class="form-control" data-bind="value:dob,datepicker:true" name="dob" placeholder="MM/dd/yyyy"/>
+</div>
+<h3>Address</h3>
+<div class="form-group">
+	<label for="line1">Address Line 1</label>
+	<input class="form-control" data-bind="value:line1" name="line1" placeholder="Street"/>
+</div>
+<div class="form-group">
+	<label for="line2">Address Line 2</label>
+	<input class="form-control" data-bind="value:line2" name="line2" placeholder="Locality"/>
+</div>
+<div class="form-group">
+	<label for="city">City</label>
+	<input class="form-control" data-bind="value:city" name="city" placeholder="City"/>
+</div>
+<div class="form-group">
+	<label for="state">State</label>
+	<input class="form-control" data-bind="value:state" name="state" placeholder="State"/>
+</div>
+<div class="form-group">
+	<label for="zip">Zip</label>
+	<input class="form-control" data-bind="value:zip" name="zip" placeholder="Zip"/>
+</div>
+
+<a class="btn btn-default" href="#patient">Cancel</a>
+<button class="btn btn-primary" data-bind="enable:canSave,click:save">Save</button>
